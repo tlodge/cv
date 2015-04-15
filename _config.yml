@@ -1,2 +1,2 @@
 baseurl: /cv
-include: [stylesheets,js]
+include: ['stylesheets','js']
