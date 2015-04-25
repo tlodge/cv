@@ -5,39 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="/cv/stylesheets/app.css" />
+    <link rel="stylesheet" href="/cv/stylesheets/cv.css" />
     <script src="/cv/bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-  	<div class="row">
-      <div class="large-3 columns">
-       	<h1>
-       		<a href="#" class="button">Download my cv </a>
-      	</h1>
-      </div>
-    </div>
+  	<div class="contain-to-grid sticky">
+  		<nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+  			<section class="top-bar-section">
+  			<ul class="right">
+				<li class="name">
+				  <a href="#" class="button">Download my cv </a>
+				</li>
+			</ul>
+			<ul class="left">
+				<li><a href="#">Key skills</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Recent work</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Employment</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Education</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Showcase</a></li>
+			</ul>
+			</section>
+		</nav>
+	</div>
+  
     <div class="row">
       <div class="large-12 columns">
-        <h1>Tom Lodge</h1>
-        <h4 class="subheader">Research Fellow, Developer</h4>
+        <h1>Tom Lodge <small> Research Fellow, Developer</small></h1>
       </div>
     </div>
     <div class="row">
-  <div class="large-12 columns">
-	   <hr>
-	   <p> I am a <strong>research fellow</strong>, <strong>developer</strong> and <strong>would-be entrepreneur</strong> at Nottingham University.  I have worked on a huge variety of projects, and have amassed expertise in a <strong>wide range </strong>of technologies <strong>right across the stack</strong>, from low level infrastructure code (building home routers) to front end development and mobile apps.  I'm also a director/lead developer for an early stage startup which is developing software to high-rise residential communities.  Most recently I've been enjoying frontend work and have cut my teeth on <strong>data visualisation</strong> and <strong>javascript</strong> frameworks</p>
+  <div class="large-12 columns about">
+I am a <strong>research fellow</strong>, <strong>developer</strong> and hopeful entrepreneur at <strong>Nottingham University.</strong>  I have worked on a broad variety of projects, and have built up expertise in technologies right across the stack, from <strong>low level infrastructure</strong> code (building home routers) to <strong>front-end</strong> development and <strong>mobile</strong> apps.  I'm also a <strong>director/lead developer</strong> for an early stage startup which is developing software for high-rise residential communities.  Most recently I've been enjoying front-end work and have a keen and growing interest in design for <strong>data visualisation</strong>
   </div>
 </div>
 
-
-<div class="row">
-  <div class="large-12 columns">
-	   <hr>
-  </div>
-</div>
-
-<div class="row">
-  
-</div>
 
 <div class="row">
 	<div class="large-3 medium-3 columns">
@@ -60,9 +65,9 @@
 	<div class="large-3 medium-3 columns">
 		 <h4> Backend </h4>
 		 <ul class="inline-list">
-			<li>Nodejs</li>
-			<li>Python (flask)</li>
-			<li>Jekyll </li>
+			<li>Node.js</li>
+			<li>Python (flask/bottle)</li>
+			<li>Jekyll</li>
 			<li>Java</li>
 			<li>PHP</li>
 			<li>Drupal</li>
@@ -101,7 +106,7 @@
 
 <div class="row">
   <div class="large-3 medium-3 columns">
-  	<h4 class="text-left">Recent projects</h4>
+  	<h4 class="text-left">Recent work</h4>
   </div>
   <div class="large-9 medium-9 columns">
   	
@@ -137,7 +142,7 @@
 			</div>
 			<div class="row">
 				<div class="large-12 medium-12 columns">
-					<p>I ran a <a href="http://www.upintheclouds.org">pilot project</a> in collaboration with <i>Microsoft Research</i> which investigated the role that technology might play in supporting residents living in high-rise and high-density communities.   The project was composed of several strands: data analysis and visualisation (of forum data), ethnography and a workshop with industry professionals. The project has lead on to trails in a large flagship East London housing estate</p>
+					<p>I ran a <a href="http://www.upintheclouds.org">pilot project</a> in collaboration with <i>Microsoft Research</i> which investigated the role that technology might play in supporting residents living in high-rise and high-density communities.   The project was composed of several strands: data analysis and visualisation (of forum data), ethnography and a workshop with industry professionals. One exciting outcome from the project has been the chance to run technology trials in a large flagship East London housing estate</p>
 				</div>
 			</div>
   	 	</div>
@@ -155,7 +160,7 @@
 			</div>
 			<div class="row">
 				<div class="large-12 medium-12 columns">
-					<p>This project investigated how users might take greater control and ownership of their 'digital footprint' by considering a locally controlled hosted and managed personal data store which that could offer support for constrained queries by third parties. I developed and extended Python code to develop a proof-of-concept, small form factor, linux arm computer (dreamplug).   The device operated as a home router and collected energy and network data which could be interrogated by (ouath) permitted third parties. [LINKS] </p>
+					<p>This project investigated how users might take greater control and ownership of their 'digital footprint' by considering a locally controlled hosted and managed personal data store that permits constrained queries by third parties (energy companies/supermarkets etc). I developed and extended code (python) to create a proof-of-concept home router that collected energy and network data which could be interrogated by (OAuth) permitted third parties. The software ran on a small form factor, Linux arm computer (dreamplug)[LINKS] </p>
 				</div>
 			</div>
   	 	</div>
@@ -189,7 +194,7 @@
 
 <div class="row">
   <div class="large-3 medium-3 columns">
-  	<h4 class="text-left">Work</h4>
+  	<h4 class="text-left">Employment</h4>
   </div>
   <div class="large-9 medium-9 columns">
   	
@@ -197,34 +202,34 @@
 		<div class="large-9 medium-9 columns">
 			<div class="row">
 				<div class="large-12 medium-12 columns">
-					<h4> University of Nottingham <small>Horizon Digital Economy</small><h4>
-					<h5 class="subheader"> Research Fellow</h5>
+					<h4>University of Nottingham <small>Horizon Digital Economy</small><h4>
+					<h5 class="subheader">Research Fellow</h5>
 				</div>
 			</div>
 		</div>
 		<div class="large-3 medium-3 columns">
-			<h5 class="text-right"> 2013-Current </h5>
+			<h5 class="text-right">2013-Current </h5>
 		</div>
 		<hr>
   	</div>
   	
   	<div class="row">
   	 	<div class="large-9 medium-9 columns">
-  	 		<h4> Queen Mary, University of London <small>Open & Distance Learning</small><h4>
+  	 		<h4>Queen Mary, University of London <small>Open & Distance Learning</small><h4>
   	 		<h5 class="subheader"> Research Associate</h5>
   	 	</div>
   	 	<div class="large-3 medium-3 columns">
-  	 		<h5 class="text-right"> 2002-2005 </h5>
+  	 		<h5 class="text-right">2002-2005 </h5>
   	 	</div>
   	 	<hr>
   	</div>	
   	<div class="row">
   	 	<div class="large-9 medium-9 columns">
-  	 		<h4> University College London <small>Networks & Multimedia Research</small><h4>
-  	 		<h5 class="subheader"> Research Associate</h5>
+  	 		<h4>University College London <small>Networks & Multimedia Research</small><h4>
+  	 		<h5 class="subheader">Research Associate</h5>
   	 	</div>
   	 	<div class="large-3 medium-3 columns">
-  	 		<h5 class="text-right"> 2002-2005 </h5>
+  	 		<h5 class="text-right">2002-2005 </h5>
   	 	</div>
   	</div>				
   </div>

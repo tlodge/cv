@@ -5,20 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{title}}</title>
     <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/app.css" />
+    <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/cv.css" />
     <script src="{{site.baseurl}}/bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-  	<div class="row">
-      <div class="large-3 columns">
-       	<h1>
-       		<a href="#" class="button">Download my cv </a>
-      	</h1>
-      </div>
-    </div>
+  	<div class="contain-to-grid sticky">
+  		<nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+  			<section class="top-bar-section">
+  			<ul class="right">
+				<li class="name">
+				  <a href="#" class="button">Download my cv </a>
+				</li>
+			</ul>
+			<ul class="left">
+				<li><a href="#">Key skills</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Recent work</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Employment</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Education</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Showcase</a></li>
+			</ul>
+			</section>
+		</nav>
+	</div>
+  
     <div class="row">
       <div class="large-12 columns">
-        <h1>Tom Lodge</h1>
-        <h4 class="subheader">Research Fellow, Developer</h4>
+        <h1>Tom Lodge <small> Research Fellow, Developer</small></h1>
       </div>
     </div>
     {{content}}
