@@ -6,7 +6,6 @@
     <title>{{title}}</title>
     <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/app.css" />
     <link rel="stylesheet" href="{{site.baseurl}}/stylesheets/cv.css" />
-    <script src="{{site.baseurl}}/bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
   	<div class="contain-to-grid sticky">
@@ -32,8 +31,7 @@
 		</nav>
 	</div>
     {{content}}
-    <script src="{{site.baseurl}}/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="{{site.baseurl}}/bower_components/foundation/js/foundation.min.js"></script>
-    <script src="{{site.baseurl}}/js/app.js"></script>
+ 
+    <script data-main="js/showcase.js" src="js/require/require.js"></script>
   </body>
 </html>
