@@ -10,8 +10,9 @@ require.config({
     }
 });
 
-require(['jquery','d3building'], function($,d3building){
+require(['jquery','demomenu'], function($,menu){
 	console.log("ok am here!!!");
+	ko.applyBindings(menu, document.getElementById("menu"));
 });
 
 
