@@ -8,15 +8,17 @@ title: Tom Lodge's CV
 			<dl class="sub-nav padded">
 			  <dt>Projects:</dt>
 			  <!-- ko foreach: menuItems -->
-			  	<dd><a href="#" data-bind="text:name"></a></dd>
+			  	<dd><a href="#" data-bind="text:name, onClick:function(){$parent.selectedItem($data);}"></a></dd>
 			  <!-- /ko -->
-			  
-			  <!--<dd class="active"><a href="#">roomcast</a></dd>
-			  <dd><a href="#">ucn</a></dd>
-			  <dd><a href="#">homework</a></dd>
-			  <dd><a href="#">communities in the clouds</a></dd>
-			  <dd><a href="#">becoming dataware</a></dd>-->
 			</dl>
 		</div>
 	</div>
 </div>
+
+<!-- these sections will be loaded dynamically as needed -->
+<div id="roomcast"></div>
+<div id="erith"></div>
+<div id="ucn"></div>
+<div id="homework"></div>
+<div id="cinc"></div>
+<div id="dataware"></div>
