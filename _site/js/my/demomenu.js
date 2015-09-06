@@ -6,7 +6,7 @@ define(['knockout'], function(ko){
 		
 		init = function(){
 			console.log("initing!! menu items!!");
-			menuItems([{name:"test one", name:"test two", name:"test three!"}]);
+			menuItems([{name:"test one"}, {name:"test two"}, {name:"test three!"}]);
 		};
 	
 	return {
