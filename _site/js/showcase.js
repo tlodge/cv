@@ -11,7 +11,7 @@ require.config({
     }
 });
 
-require(['jquery','demomenu'], function($,menu){
+require(['jquery','knockout','demomenu'], function($,ko,menu){
 	console.log("ok am here!!!");
 	ko.applyBindings(menu, document.getElementById("menu"));
 });
