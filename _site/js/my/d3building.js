@@ -1,4 +1,4 @@
-define(['jquery','d3', 'util', 'socketio'], function($,d3,util, io){
+define(['jquery','d3', 'util'], function($,d3,util){
 
 	"use strict";
 	var 
