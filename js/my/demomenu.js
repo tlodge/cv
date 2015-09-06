@@ -22,11 +22,9 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		}),
 		
 		loadTemplate = function(item){
-			 console.log("loading a template for");
-			 console.log(item);
 			 if (loadedTemplates.indexOf(item.id) < 0){
-                require([],
-                    function(){
+                require([item.id],
+                    function(vm){
                        
                         $.ajax({
                             type: "GET",
@@ -37,7 +35,6 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
                                 $("#" + item.id).append("<div data-bind='visible:amSelected()'>" + response + "</div>");
                                 ko.applyBindings(vm, $("#" + item.id)[0]);
                                 loadedTemplates.push(item.id);
-                                //vm.loadData();
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
                                 //handle error appropriately!
