@@ -41,7 +41,7 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
                                 $("#" + item.id).append("<div data-bind='visible:amSelected()'>" + response + "</div>");
                                 ko.applyBindings(vm, $("#" + item.id)[0]);
                                 loadedTemplates.push(item.id);
-                                vm.selectedItem(item);
+                                //vm.selectedItem(item);
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
                                 //handle error appropriately!
@@ -54,6 +54,7 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		
 		init = function(){
 			selectedItem(menuItems()[0]); 
+			//loadTemplate((menuItems()[0]);
 		};
 	
 	return {

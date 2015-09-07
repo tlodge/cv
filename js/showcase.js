@@ -15,6 +15,7 @@ require.config({
 
 require(['jquery','knockout','demomenu'], function($,ko,menu){
 	ko.applyBindings(menu, document.getElementById("menu"));
+	menu.init();
 });
 
 
