@@ -6,7 +6,7 @@ define(['jquery','knockout', 'd3building', 'knockoutpb'], function($, ko, d3buil
 		},
 		
 		height: function(){
-			return $(document).height();
+			return $(document).height()/2;
 		},
 		
 		x: function(){
