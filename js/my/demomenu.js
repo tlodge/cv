@@ -13,12 +13,13 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		
 		loadedTemplates = [],
 		
-		selectedItem    = ko.observable(menuItems()[0]).publishOn("menu_event"),
+		selectedItem    = ko.observable().publishOn("menu_event"),
 		
 		_subscription = selectedItem.subscribe(function(item){
+			console.log("LODING TEMPLET ");
+			console.log(item);
 			loadTemplate(item);
 		}),
-		
 		
 		amActive = function(item){
 			return selectedItem() ? item.id === selectedItem().id : false;
@@ -49,7 +50,7 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		},
 		
 		init = function(){
-			 
+			selectedItem(menuItems()[0]); 
 		};
 	
 	return {
