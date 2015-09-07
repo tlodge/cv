@@ -13,11 +13,13 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 			{id: 'backend', name:'backend', img: '../assets/img/splash.svg'},
 		]),
 		
+		selectedSrc = ko.observable(menuItems()[0].img),
+		
 		selectSrc = function(src){
+			console.log("great seen img selected");
+			console.log(src);
 			selectedSrc(src);
 		},
-		
-		selectedSrc = ko.observable(menuItems()[0].img),
 		
         amSelected      = ko.computed(function(){
             console.log("checking selected for id " + id);
