@@ -6,9 +6,9 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 											{name:"roomcast", 	id: "roomcast"},
 											{name:"erith park", id: "erith"}, 
 											{name:"ucn", 		id: "ucn"}, 
-											{name:"communities in the clouds", id: "building"},
 											{name:"homework", 	id:"homework"},
 											{name:"becoming dataware", id:"dataware"},
+											{name:"communities in the clouds", id: "building"},
 										]),
 		
 		loadedTemplates = [],
