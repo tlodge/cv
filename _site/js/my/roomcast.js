@@ -25,9 +25,9 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		
 		selectedSrc = ko.computed(function(){
 			return selected().img
-		},
+		}),
 		
-        amSelected      = ko.computed(function(){
+        amSelected    = ko.computed(function(){
             console.log("checking selected for id " + id);
             return id === selectedItem().id
         });
