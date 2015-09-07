@@ -36,7 +36,7 @@
 			<dl class="sub-nav padded">
 			  <dt>Projects:</dt>
 			  <!-- ko foreach: menuItems -->
-			  	<dd><a href="#" data-bind="text:name, css:{active:$parent.amActive($data)}, click:function(){$parent.selectedItem($data);}"></a></dd>
+			  	<dd data-bind="css:{active:$parent.amActive($data)}"><a href="#" data-bind="text:name, click:function(){$parent.selectedItem($data);}"></a></dd>
 			  <!-- /ko -->
 			</dl>
 		</div>
