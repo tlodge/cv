@@ -17,9 +17,5 @@
 }
 
 .button.active{
-	background: red;
-}
-
-.active{
-	background: red;
+	background: #d35a51;
 }

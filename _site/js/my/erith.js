@@ -1,4 +1,4 @@
-define(['jquery','knockout', 'knockoutpb', 'erith-react'], function($, ko){
+define(['jquery','knockout', 'knockoutpb'], function($, ko){
 	
 	var 
 		id = "erith",
