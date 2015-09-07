@@ -12,14 +12,6 @@
 	padding-top: 0.6em;
 }
 
-.roomcastsplash{
-	background: url(../assets/img/splash.svg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-}
-
 .fullwidth{
 	width: 100%;
 }

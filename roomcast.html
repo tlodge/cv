@@ -9,14 +9,14 @@ title: showcase
 			<div class="large-12 medium-12 columns">
 				<ul class="inline-list">
 					 <!-- ko foreach: menuItems -->
-					 	<li><a href="#" class="button tiny" data-bind="text:name"></a></li>
+					 	<li><a href="#" class="button tiny" data-bind="text:name, click:function(){$parent.selectSrc(img)}"></a></li>
 					 <!-- /ko -->
 				</ul>
 			</div>
 		</div>	
 		<div class="row">
 			<div class="large-12 medium-12 columns">
-				<img class="fullwidth" src="../assets/img/splash.svg"/>
+				<img class="fullwidth" data-bind="attr{src:selectedSrc}"/>
 			</div>
 		</div>	
 	</div>
