@@ -28,13 +28,13 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 				id: 'maker', 
 				name: 'maker',  
 				img: '../assets/img/splash.svg',
-				html:"<h4> Management tools</h4> Roomcast provides a simple and powerful 'maker' dashboard that allows management (or residents) to create new buttons to target at one or more residents.  Buttons can be created and removed with complete ease which means that new buttons can be published in immediate response to issues and removed if and when they are no longer appropriate.  Roomcast gives users an exciting set of tools and a platform that gets them out into the community immediately.  "		
+				html:"<h4> Management tools</h4> Roomcast provides a simple and powerful 'maker' dashboard that allows management (or residents) to create new buttons to target at one or more residents.  Buttons can be created and removed with complete ease which means that new buttons can be published in immediate response to issues and removed if and when they are no longer appropriate.  Roomcast gives users an exciting set of tools and a platform that gets them out into the community immediately. "		
 			},
 			{
 				id: 'dashboard',  	
 				name:'dashboard', 
 				img: '../assets/img/splash.svg',
-				html:"<h4>Live reports</h4> Button creation, management and tracking is all built into roomcast.  Management get live updates when buttons are pressed, and responsibilities can be assigned to different sets of buttons.  All button presses are tracked, providing residents and managers useful, timely information on their community'
+				html:"<h4>Live reports</h4> Button creation, management and tracking is all built into roomcast.  Management get live updates when buttons are pressed, and responsibilities can be assigned to different sets of buttons.  All button presses are tracked, providing residents and managers useful, timely information on their community"
 		
 			},
 		]),
