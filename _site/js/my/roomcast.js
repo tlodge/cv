@@ -6,11 +6,37 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
         selectedItem    = ko.observable().subscribeTo("menu_event", true),
 
 		menuItems = ko.observableArray([
-			{id: 'panel', name: 'panel',  img: '../assets/img/splash.svg'},
-			{id: 'register',  	name:'register', img: '../assets/img/register.svg'},
-			{id: 'maker', name: 'maker',  img: '../assets/img/splash.svg'},
-			{id: 'dashboard',  	name:'dashboard', img: '../assets/img/splash.svg'},
-			{id: 'backend', name:'backend', img: '../assets/img/splash.svg'},
+			{
+				id: 'overview', 
+				name: 'overview',  
+				img: '../assets/img/splash.svg', 
+				html: "<h4>roomcast</h4> Roomcast is an inventive new platform for managing residents in high-rise residential buildings.  It is built on top of React/Flux/Node and uses a graph database: Neo4j as its datastore.  Neo4j is great for modelling the physical structure of a building and had lead to a platform that will allow users and developers to express their intentions more naturally."
+			},
+			{
+				id: 'panel',  	
+				name:'panel', 
+				img: '../assets/img/register.svg',
+				html: "<h4>the user experience<h4>  Buildings are extremely complex and as a result the management of the wants and needs of the users living within them is challenging.  Roomcast provides a delightfully simple interface of <strong>buttons</strong> to users which will allow them to quickly and easily accomplish tasks.  Buttons hook into <a href='http://nodered.org'>node red</a> a visual 'Internet of Things' toolkit, which means that buttons can be wired to do pretty much anything"
+			},	
+			{
+				id: 'register',  	
+				name:'register', 
+				img: '../assets/img/register.svg',
+				html: "<h4>registration</h4> As ever, users can register through social media accounts.  Managers (such as on-site concierges) can permit or deny registrations as standard.  More importantly, they are provided with rich set of tools for reaching out to specific sets of users, whether by block, floor or tenancy or even adjacency (such as all landlords that own flats beneath apartment 10)"
+			},	
+			{
+				id: 'maker', 
+				name: 'maker',  
+				img: '../assets/img/splash.svg',
+				html:"<h4> Management tools</h4> Roomcast provides a simple and powerful 'maker' dashboard that allows management (or residents) to create new buttons to target at one or more residents.  Buttons can be created and removed with complete ease which means that new buttons can be published in immediate response to issues and removed if and when they are no longer appropriate.  Roomcast gives users an exciting set of tools and a platform that gets them out into the community immediately.  "		
+			},
+			{
+				id: 'dashboard',  	
+				name:'dashboard', 
+				img: '../assets/img/splash.svg',
+				html:"<h4>Live reports</h4> Button creation, management and tracking is all built into roomcast.  Management get live updates when buttons are pressed, and responsibilities can be assigned to different sets of buttons.  All button presses are tracked, providing residents and managers useful, timely information on their community'
+		
+			},
 		]),
 		
 		selected = ko.observable(menuItems()[0]),
@@ -27,8 +53,11 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 			return selected().img
 		}),
 		
+		selectedHTML = ko.computed(function(){
+			return selected().html
+		}),
+		
         amSelected    = ko.computed(function(){
-            console.log("checking selected for id " + id);
             return id === selectedItem().id
         });
         
@@ -38,6 +67,7 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		selectedSrc:selectedSrc,
 		selectItem:selectItem,
 		amActive: amActive,
+		selectedHTML:selectedHTML,
     }
 
 });

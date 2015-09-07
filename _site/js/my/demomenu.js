@@ -16,8 +16,6 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		selectedItem    = ko.observable().publishOn("menu_event"),
 		
 		_subscription = selectedItem.subscribe(function(item){
-			console.log("subscription....seeen load template for");
-			console.log(item);
 			loadTemplate(item);
 		}),
 		
