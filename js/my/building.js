@@ -33,9 +33,15 @@ define(['jquery','knockout', 'd3building', 'model', 'uidelegate', 'knockoutpb'],
         selectedItem    = ko.observable().subscribeTo("menu_event", true),
 
         amSelected      = ko.computed(function(){
-            console.log("checking selected for id " + id);
+        	if (id !== selectedItem().id){
+        		d3building.hide();
+        	}else{
+        		d3building.show();
+        	}
             return id === selectedItem().id
         });
+        
+        
         
     return {
 		amSelected: amSelected

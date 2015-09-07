@@ -3,8 +3,6 @@ define(['jquery','d3', 'util'], function($,d3,util){
 	"use strict";
 	var 
 		
-		root,
-		
 		delegate,
 		
 		apartmentdata 	  = {},
@@ -18,11 +16,7 @@ define(['jquery','d3', 'util'], function($,d3,util){
 		maxheights		  = [],
 		apartmentrects	  = [],
 		visiblerooms	  = {},
-		
-		xskew = 40,
-    	
-    	yskew = 20,
-        
+	    
         
         matrix 		   = [],
         
@@ -291,69 +285,6 @@ define(['jquery','d3', 'util'], function($,d3,util){
   		},
   		
   		
-  		perspective = function(){
-  			console.log("IN PERSPECTIVE!!!");
-  			var rc = rowscols(selectedrooms.length);
-			var ma = maxaspect(rc.cols, rc.rows);
-  			var ptransforms = [];
-  			var sourcepoints = [];
-  			var targetpoints = [];
-  			
-  			d3.selectAll("g.layer")
-				.each(function(d,i){
-					console.log("selecting g.layer" + i);
-					
-					var element = d3.select("g.layer"+i);
-					
-					var ctrans = d3.transform(element.attr("transform"));
-					console.log(ctrans);
-					
-					ptransforms.push(element); 
-					//lt,rt,lb,rb
-					sourcepoints[i] = [[0, (ma+roompadding)*i],[rc.cols*(ma+roompadding), (ma+roompadding)*i], [0, ((ma+roompadding)*i)+ma],[rc.cols*(ma+roompadding), ((ma+roompadding)*i)+ma]]; 
-					
-					var tpx1 = 0,
-					tpx2 	 = rc.cols*(ma+roompadding),
-					tpx3 	 = 0,
-					tpx4     = rc.cols*(ma+roompadding);
-					
-					var tpy1 = (ma+roompadding)*i,
-					tpy2 	 = (ma+roompadding)*i,
-					tpy3 	 = ((ma+roompadding)*i)+ma,
-					tpy4 	 = ((ma+roompadding)*i)+ma;
-					
-					console.log([[tpx1, tpy1],[tpx2,tpy2], [tpx3,tpy3],[tpx4,tpy4]]);
-		//			element.style(transform + "-origin",  ((ma+roompadding)*i)/2 + "px " + (rc.cols*(ma+roompadding))/2 + "px 0");
-					//targetpoints[i] = [[xskew, (ma+roompadding)*i],[rc.cols*(ma+roompadding)-xskew, (ma+roompadding)*i], [0, ((ma+roompadding)*i)+ma-yskew],[rc.cols*(ma+roompadding), ((ma+roompadding)*i)+ma-yskew]];
-					//targetpoints[i] = [[tpx1+xskew, tpy1],[tpx2-xskew,tpy2], [tpx3,tpy3-yskew],[tpx4,tpy4-yskew]];
-					
-					targetpoints[i] = [[tpx1+xskew, tpy1],[tpx2,tpy2], [tpx3,tpy3],[tpx4,tpy4]];
-					
-			});
-		
-			ptransforms.forEach(function(element, i){
-				console.log(element);
-				transformer(element, sourcepoints[i], targetpoints[i]);
-			});
-			
-			/*d3.transition()
-				.duration(750)
-				.tween("points", function(){
-					//create the iterators
-					var iterators = [];
-					
-					ptransforms.forEach(function(element,i){
-						iterators.push(d3.interpolate(sourcepoints[i], targetpoints[i]));
-					});
-					return function(t){
-						ptransforms.forEach(function(element,i){
-					  		transformer(element, sourcepoints[i], iterators[i](t));
-					  	})
-					}
-			});*/
-  		
-  		},
-  
   		floorselected = function(d){
   			if (selectedrooms != []){
   				selectedrooms = []
@@ -387,98 +318,6 @@ define(['jquery','d3', 'util'], function($,d3,util){
   		},
   		
   		
-  		//intersect and union?
-  		overlay = function(cback){
-
-			d3.selectAll("g.room").selectAll("g.overlay").remove();
-			
-			var room = d3.selectAll("g.room")
-  			  			 //.append("g")
-  			  			 .insert("g", "rect.roomlabelcontainer")
-			  		     .attr("class", function(d){return "overlay overlay_"+ d.id})
-			  		     .attr("transform", function(d){return "translate(" + d.coords.x + "," + d.coords.y + ")"})		    
-					     .call(cback);						
-  		},
-  		
-  		//update the current rooms with additional ones
-  		unionrooms  = function(rms){
-  			
-  		
-  			d3.selectAll("rect.window").style("fill-opacity", 0.0);
-  			selectedfloors = [];
-  			renderfloors();
-  			
-  			//determine what level of zoom we're at?
-			if (!rooms)
-				return;
-			
-			console.log(rooms);
-			
-  			rms.forEach(function(room){
-  				
-  				console.log("looking for" + room);		
-  				if (rooms[room]){
-					if (!roomselected(room)){
-						console.log("ADDING ROOM ");
-						console.log(room);
-						selectedrooms.push(square(rooms[room]));
-					}
-  				}
-  			});
-  			console.log("ok selected rooms is now");
-  			console.log(selectedrooms);
-  			renderrooms();
-  		},
-  		
-  		//re-initialise the chart with a set of rooms
-  		refreshrooms = function(rooms){
-  			
-  			//set all data to empty
-  			
-  			selectedrooms = [];
-  			renderrooms();
-  			
-  			selectedfloors = [];
-  			renderfloors();
-  			
-  			
-  			rooms.forEach(function(room){
-  				if (roomdata[room]){
-  				var floor = floorforid(roomdata[room].floor);
-  					if (selectedfloors.indexOf(floor) == -1)
-  						selectedfloors.push(floor);
-  				}
-  			});
-  		
-  			renderfloors();
-  			
-  			window.setTimeout(function(){
-  					
-  				//drag start
-  				visiblerooms = [];
-				selectedrooms = [];
-				d3.selectAll("rect.room").style("fill", function(d){return delegate.colour(d.data["id"])})
-				adjustfloorcoords();
-				
-				var roomnames = visiblerooms.map(function(item){
-					return item.name;
-				});
-				
-				//drag move		
-				selectedrooms = visiblerooms.filter(function(item){
-					return rooms.indexOf(item.name) != -1;
-				});
-				
-				//drag end
-				selectedfloors = [];
-  				renderfloors();
-  				d3.selectAll("rect.window").style("fill-opacity", 0.0)
-  				renderrooms();
-				
-  			},500);
-  				
-  		},
-  		
   		scalefactor = function(cols, rows, floor){
   		    var maxwidth = maxwidths[floor];
   			var w = maxaspect(cols,rows) - (2*roompadding) - (2*layoutpadding);
@@ -490,12 +329,6 @@ define(['jquery','d3', 'util'], function($,d3,util){
   			return parseInt(id)-1;
   		},
   		
-  		roomclicked = function(d){
-  			channel.publish({
-					channel: 'taptap',
-					message: d.id
-			});	
-  		},
   		
   		comp	 = function(label){
 			//pull out all numbers in the string and return as Integer
@@ -568,7 +401,6 @@ define(['jquery','d3', 'util'], function($,d3,util){
 				.attr("width", function(d){return d.coords.width})
 				.attr("height", function(d){return d.coords.height})
 				.style("fill", "red")
-				.on("click", roomclicked)
 				.transition()
 				.duration(500)	
 				.style("stroke-width", function(d){return 1/sfx(d)})
@@ -620,142 +452,8 @@ define(['jquery','d3', 'util'], function($,d3,util){
 	
 			roomline.exit()
 					.remove();
-			
-			//perspective();
-			//window.setTimeout(perspective, 1000);
   		},
-    			
-  		renderrooms_old = function(){
-  			
-  			
-  			selectedrooms.sort(function(a,b){return (a.id > b.id) ? 1 : (a.id < b.id) ? -1 : 0})
-  			
-  			var rc 		=  rowscols(selectedrooms.length);
-  			var roomhw  =  maxaspect(rc.cols,rc.rows) - (2*roompadding);
-  			var transx  =  function(d,i){return -(d.coords.x*(roomhw/d.coords.width)) +  ax(i,rc.rows,rc.cols)};
-			var transy  =  function(d,i){return -(d.coords.y*(roomhw/d.coords.height)) + ay(i,rc.rows,rc.cols)};
-			var sfx     =  function (d){return roomhw/d.coords.width};
-			var sfy     =  function (d){return roomhw/d.coords.height};
-			var labelheight = function(d){return (maxaspect(rc.cols,rc.rows) - (2*roompadding)) / 5}
-  			
-  			var rooms  	= svg.select("g.apartmentdetail")
-  							 .selectAll("g.room")
-  							 .data(selectedrooms, function(d,i){return d.id})
-  			
-  			
-  			//hmmm - think translate makes new additions hard. might be better to move coords explicitly
-  			
-  			
-  			//note that we can't just append labels to the rooms g container as when the translate
-  			//occurs it'll screw up the fonts. Instead we bind to selectedrooms again and update 
-  			//coords directly
-  			
-  			var labels  = svg.select("g.apartmentdetail")
-  							 .selectAll("g.roomlabel")
-  							 .data(selectedrooms, function(d,i){return d.id})
-  			
-  			//handle old rooms
-  			svg.selectAll("g.room")
-  				.transition()
-  				.duration(800)
-  				.attr("transform", function(d,i){
-  					var idx = selectedrooms.indexOf(d);
-  					var t = d3.transform(d3.select(this).attr("transform"));
-  					return "translate(" + transx(d,idx) + "," + transy(d,idx) +"),scale(" + sfx(d)  + "," + sfy(d) +")"
-  				
-  				})
-			
-  			svg.selectAll("rect.apartment")
-  				.style("stroke-width", function(d){return 1/sfx(d)})
-  			
-  			svg.selectAll("rect.roomlabelcontainer")
-  				 .transition()
-  				 .duration(800)
-				 .attr("x",function(d,i){return ax(selectedrooms.indexOf(d),rc.rows,rc.cols)})
-				 .attr("y",function(d,i){return ay(selectedrooms.indexOf(d),rc.rows,rc.cols) + (d.coords.height*sfy(d)) - labelheight(d)})	
-				 .attr("width",function(d,i){return maxaspect(rc.cols,rc.rows) - (2*roompadding)})
-				 .attr("height", function(d){return labelheight(d)})
-  			
-  			 svg.selectAll("text.roomlabel")
-  			 	 .transition()
-  				 .duration(800)
-  			 	 .attr("x",function(d,i){return ax(selectedrooms.indexOf(d),rc.rows,rc.cols) +  (maxaspect(rc.cols,rc.rows) - (2*roompadding))/2})
-				 .attr("y",function(d,i){return (ay(selectedrooms.indexOf(d),rc.rows,rc.cols) + (d.coords.height*sfy(d)) - labelheight(d)) + labelheight(d)/2})	
-	  			 .style("font-size", function(d){return 0.8*labelheight(d) + "px"})
-  			
-  			//handle new rooms					 	
-  			var window = rooms
-						.enter()
-						.append("g")
-						.attr("class", "room")
-				
-			window.append("rect")
-				.attr("class", function(d){return "apartment apartment_" + d.id})	
-				.attr("x",function(d){return d.coords.x})
-				.attr("y",function(d){return  d.coords.y})
-				.attr("width", function(d){return d.coords.width})
-				.attr("height", function(d){return d.coords.height})
-				.style("fill", "red")
-				.transition()
-				.duration(500)	
-				.style("stroke-width", function(d){return 1/sfx(d)})
-				.style("stroke", "black")
-				.style("fill", "white")
-				.each('end',function(){
-					//fade in labels once the room rects have moved into place!
-					 d3.selectAll("g.roomlabel")
-					 	.transition()
-					 	.duration(800)
-					    .style("opacity", 1.0);
-				});
-			
-			
-			window.transition()
-				.duration(1000)
-				.attr("transform", function(d,i){return "translate(" + transx(d,i) + "," + transy(d,i) +"),scale(" + sfx(d)  + "," + sfy(d) +")"})
-			
-			//handle new labels
-			
-			var label = labels
-						.enter()
-						.append("g")
-						.attr("class", "roomlabel")	
-						.attr("opacity", 0.0)
-						
-			label.append("rect")
-				 .attr("class", "roomlabelcontainer")
-				 .attr("x",function(d,i){return ax(i,rc.rows,rc.cols)})
-				 .attr("y",function(d,i){return ay(i,rc.rows,rc.cols) + (d.coords.height*sfy(d)) - labelheight(d)})	
-				 .attr("width",function(d,i){return maxaspect(rc.cols,rc.rows) - (2*roompadding)})
-				 .attr("height", function(d){return labelheight(d)})	
-				 .style("stroke-width", function(d){return 1})
-				 .style("stroke", "black")
-				 .style("fill", "#f47961")
-				 .style("fill-opacity", 0.9)
-			
-			
-			label.append("text")
-				  .attr("class", "roomlabel")
-				  .attr("dy", ".35em")
-	  			  .attr("x",function(d,i){return ax(i,rc.rows,rc.cols) +  (maxaspect(rc.cols,rc.rows) - (2*roompadding))/2})
-				  .attr("y",function(d,i){return (ay(i,rc.rows,rc.cols) + (d.coords.height*sfy(d)) - labelheight(d)) + labelheight(d)/2})	
-	  			  .attr("fill", "#000")
-	  			  .attr("text-anchor", "middle")
-	  			  .style("font-size", function(d){return 0.8*labelheight(d) + "px"})
-	  			  .style("fill", "white")
-	  			  .text(function(d){
-	  			  		return delegate.roomtext(d.id);
-	  			  })
-	  		  	
-			//handle gone
-			
-			rooms.exit()
-				.remove();
-				
-			labels.exit()
-				.remove();
-			
-  		},
+    		
   		
   		renderfloors = function(cback){	
   			
@@ -924,51 +622,16 @@ define(['jquery','d3', 'util'], function($,d3,util){
 	  	
 	  	setdelegate = function(d){
 	  		delegate = d;
+	  	},	  		
+	  		
+	  	hide = function(){
+	  		svg.attr("visibility", "hidden");
+	  	},	
+	  	
+	  	show = function(){
+	  		svg.attr("visibility", "visible");
 	  	},
 	  	
-	  	
-	  	transformer = function(el, layerSourcePoints, layerTargetPoints){
-			for (var a = [], b = [], i = 0, n = layerSourcePoints.length; i < n; ++i) {
-					var s = layerSourcePoints[i], t = layerTargetPoints[i];
-					a.push([s[0], s[1], 1, 0, 0, 0, -s[0] * t[0], -s[1] * t[0]]), b.push(t[0]);
-					a.push([0, 0, 0, s[0], s[1], 1, -s[0] * t[1], -s[1] * t[1]]), b.push(t[1]);
-			}
-			
-			var X = solve(a, b, true), matrix = [
-					X[0], X[3], 0, X[6],
-					X[1], X[4], 0, X[7],
-					0,    0, 1,    0,
-					X[2], X[5], 0,    1
-				].map(function(x) {
-					return d3.round(x, 6);
-			});
-			
-			console.log(matrix);
-			el.style(transform, "matrix3d(" + matrix + ")");
-		},
-		
-		// Given a 4x4 perspective transformation matrix, and a 2D point (a 2x1 vector),
-		// applies the transformation matrix by converting the point to homogeneous
-		// coordinates at z=0, post-multiplying, and then applying a perspective divide.
-		project = function(matrix, point) {
-		  point = multiply(matrix, [point[0], point[1], 0, 1]);
-		  return [point[0] / point[3], point[1] / point[3]];
-		},
-
-		// Post-multiply a 4x4 matrix in column-major order by a 4x1 column vector:
-		// [ m0 m4 m8  m12 ]   [ v0 ]   [ x ]
-		// [ m1 m5 m9  m13 ] * [ v1 ] = [ y ]
-		// [ m2 m6 m10 m14 ]   [ v2 ]   [ z ]
-		// [ m3 m7 m11 m15 ]   [ v3 ]   [ w ]
-		multiply = function(matrix, vector) {
-		  return [
-			matrix[0] * vector[0] + matrix[4] * vector[1] + matrix[8 ] * vector[2] + matrix[12] * vector[3],
-			matrix[1] * vector[0] + matrix[5] * vector[1] + matrix[9 ] * vector[2] + matrix[13] * vector[3],
-			matrix[2] * vector[0] + matrix[6] * vector[1] + matrix[10] * vector[2] + matrix[14] * vector[3],
-			matrix[3] * vector[0] + matrix[7] * vector[1] + matrix[11] * vector[2] + matrix[15] * vector[3]
-		  ];
-		},
-	  			
 	  	init = function(dim){
 	  	
 	  		svg  = d3.select("#building").append("svg")
@@ -1133,17 +796,15 @@ define(['jquery','d3', 'util'], function($,d3,util){
 			});
 		
 	  		//d3.select(window).on('resize', resize);
-	  	}
+	  	};
 
 	return {
 		init:init,
 		floorforid: floorforid,
 		floorselected:floorselected,
-		refreshrooms:refreshrooms,
-		unionrooms:unionrooms,
-		overlay:overlay,
 		setdelegate: setdelegate,
-		perspective: perspective,
+		hide: hide,
+		show: show,
 	}
 
 });

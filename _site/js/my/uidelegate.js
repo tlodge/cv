@@ -27,7 +27,6 @@ define([], function(){
   				return room.name;
   			}
   			else{
-  				console.log("can't get name for " + roomid);
   				return "";
   			}
   		},
