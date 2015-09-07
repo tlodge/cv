@@ -6,7 +6,7 @@
 			<div class="large-12 medium-12 columns">
 				<ul class="inline-list">
 					 <!-- ko foreach: menuItems -->
-					 	<li><a href="#" class="button tiny" data-bind="text:name, click:function(){$parent.selectSrc(img)}"></a></li>
+					 	<li><a href="#" class="button tiny" data-bind="css:{active:function(){return $parent.amSelected($data)}}, text:name, click:function(){$parent.selectItem($data)}"></a></li>
 					 <!-- /ko -->
 				</ul>
 			</div>

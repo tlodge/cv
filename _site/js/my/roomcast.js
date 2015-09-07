@@ -13,12 +13,18 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 			{id: 'backend', name:'backend', img: '../assets/img/splash.svg'},
 		]),
 		
-		selectedSrc = ko.observable(menuItems()[0].img),
+		selected = ko.observable(menuItems()[0]),
 		
-		selectSrc = function(src){
-			console.log("great seen img selected");
-			console.log(src);
-			selectedSrc(src);
+		selectItem = function(item){
+			selected(item);
+		},
+		
+		amActive	= function(item){
+			return item.id === selected().id
+		},
+		
+		selectedSrc = ko.computed(function(){
+			return selected().img
 		},
 		
         amSelected      = ko.computed(function(){
@@ -30,7 +36,8 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		amSelected: amSelected,
 		menuItems: menuItems,
 		selectedSrc:selectedSrc,
-		selectSrc:selectSrc,
+		selectItem:selectItem,
+		amActive: amActive,
     }
 
 });
