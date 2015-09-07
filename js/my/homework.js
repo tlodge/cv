@@ -11,7 +11,6 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
         
     return {
 		amSelected: amSelected,
-		selectedItem:selectedItem,
     }
 
 });

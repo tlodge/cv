@@ -24,8 +24,7 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		},
 		
 		loadTemplate = function(item){
-			 console.log("ok loading");
-			 console.log(item);
+			
 			 if (loadedTemplates.indexOf(item.id) < 0){
 			 
                 require([item.id],
@@ -37,7 +36,7 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
                             dataType: "html",
 
                             success: function (response) {
-                            	console.log("Appendng to #" + item.id);
+                            	
                                 $("#" + item.id).append("<div data-bind='visible:amSelected()'>" + response + "</div>");
                                 ko.applyBindings(vm, $("#" + item.id)[0]);
                                 loadedTemplates.push(item.id);
