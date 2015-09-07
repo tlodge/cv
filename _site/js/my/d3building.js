@@ -977,33 +977,7 @@ define(['jquery','d3', 'util'], function($,d3,util){
 			matrix[3] * vector[0] + matrix[7] * vector[1] + matrix[11] * vector[2] + matrix[15] * vector[3]
 		  ];
 		},
-	  	
-	  	
-	  	subscribe = function(chnl){	
-	  	
-	  		
-			/*channel.subscribe({
-				channel: 'photo',
-				message: function(m){
-					
-					var el = d3.select("g.room").select("rect.apartment");
-					var x = el.attr("x");
-					var y = el.attr("y");
-					var width = el.attr("width");
-					var height = el.attr("height");
-					
-					d3.select("g.room")
-						.append("svg:image")
-						.attr("x", x)
-						.attr("y", y)
-						.attr("width", width)
-						.attr("height", height)
-						.attr("xlink:href",m);
-						
-				}
-			});	*/
-		},
-		
+	  			
 	  	init = function(dim){
 	  	
 	  		d3.select("#building")
@@ -1024,7 +998,6 @@ define(['jquery','d3', 'util'], function($,d3,util){
   							.call(dragrooms);
   							
 	  		d3.json("data/building.json", function(error, json) {
-	  			console.log("am in gere....");
 	  			
   				if (error) 
   					return console.warn(error);
@@ -1153,8 +1126,7 @@ define(['jquery','d3', 'util'], function($,d3,util){
   					
   					//should do maxheights too so that we can center in container!
   					renderbuilding(buildingdata);
-  					subscribe();
-  					comms();
+  					
 				});
 			});
 		
