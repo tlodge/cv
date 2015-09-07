@@ -6,6 +6,7 @@ require.config({
         "d3": "../d3/d3",
         "knockout": "../knockout/knockout",
         "knockoutpb": "../knockout/knockoutpb",
+        "ramda":"../ramda/ramda.min",
     },
     
     "shim": {

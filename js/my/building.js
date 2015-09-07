@@ -1,4 +1,5 @@
-define(['jquery','knockout', 'd3building', 'knockoutpb'], function($, ko, d3building){
+define(['jquery','knockout', 'd3building', 'model', 'uidelegate', 'knockoutpb'], function($, ko, d3building, model, ui){
+	
 	
 	d3building.init({
 		width: function (){
@@ -18,6 +19,13 @@ define(['jquery','knockout', 'd3building', 'knockoutpb'], function($, ko, d3buil
 		},
 		
 	});
+	//model stuff
+    model.init();
+
+    //view stuff
+    ui.init(model);
+	
+	d3building.setdelegate(ui);
 	
 	var 
 		id = "building",
