@@ -9,7 +9,7 @@ title: showcase
 			<div class="large-12 medium-12 columns">
 				<ul class="inline-list">
 					 <!-- ko foreach: menuItems -->
-					 	<li><a href="#" class="button tiny" data-bind="css:{active:$parent.amSelected($data)}, text:name, click:function(){$parent.selectItem($data)}"></a></li>
+					 	<li><a href="#" class="button tiny" data-bind="css:{active:$parent.amActive($data)}, text:name, click:function(){$parent.selectItem($data)}"></a></li>
 					 <!-- /ko -->
 				</ul>
 			</div>
