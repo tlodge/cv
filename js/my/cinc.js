@@ -20,7 +20,7 @@ define(['jquery','knockout', 'd3building', 'knockoutpb'], function($, ko, d3buil
 	});
 	
 	var 
-		id = "cinc",
+		id = "building",
 		
         selectedItem    = ko.observable().subscribeTo("menu_event", true),
 
