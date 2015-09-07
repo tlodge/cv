@@ -19,6 +19,11 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 			loadTemplate(item);
 		}),
 		
+		
+		amActive = function(item){
+			return item.id === selectedItem().id;
+		},
+		
 		loadTemplate = function(item){
 			 if (loadedTemplates.indexOf(item.id) < 0){
                 require([item.id],
@@ -44,12 +49,13 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		},
 		
 		init = function(){
-			
+			selectedItem(menuItems[0]);  
 		};
 	
 	return {
 		init: init,
 		menuItems: menuItems,
 		selectedItem:selectedItem,
+		amActive: amActive,
 	}
 });

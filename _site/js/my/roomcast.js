@@ -10,7 +10,7 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 				id: 'overview', 
 				name: 'overview',  
 				img: '../assets/img/splash.svg', 
-				html: "<h4>roomcast</h4> <p class='text-justify'>Roomcast is an inventive new platform for managing residents in high-rise residential buildings.  It is built on top of <strong>React/Flux/Node</strong> and uses a graph database: <strong>Neo4j</strong> as its datastore.  Neo4j is great for modelling the physical structure of a building and had lead to a platform that will allow users and developers to express their intentions more naturally.</p>"
+				html: "<h4>roomcast</h4> <p class='text-justify'>Roomcast is an inventive new platform for managing residents in high-rise residential buildings.  It is built on top of <strong>React/Flux/Node</strong> and uses a graph database: <strong>Neo4j</strong> as its datastore.  Neo4j is great for modelling the physical structure of a building and has helped create a platform that will allow users and developers to express intentions more naturally.</p>"
 			},
 			{
 				id: 'panel',  	
