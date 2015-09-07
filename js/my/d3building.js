@@ -75,16 +75,7 @@ define(['jquery','d3', 'util'], function($,d3,util){
 	  	dragfloors = d3.behavior.drag()
   						   .on("drag", dragfloormove),
 								   		   
-	  	svg  = d3.select("#building").append("svg")
-				.attr("width", width)
-				.attr("height", height)
-				//.attr("viewBox", "0 0 " + width + " " + height)
-				.append("g")
-				.attr("class", "building")
-				.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-				.append("g")
-				.attr("class", "padding")
-				.attr("transform", "translate(" + innermargin.left + "," + innermargin.top + ")"),
+	  	svg,
 	
 		adjustfloorcoords = function(){
   			
@@ -980,6 +971,17 @@ define(['jquery','d3', 'util'], function($,d3,util){
 	  			
 	  	init = function(dim){
 	  	
+	  		svg  = d3.select("#building").append("svg")
+				.attr("width", width)
+				.attr("height", height)
+				//.attr("viewBox", "0 0 " + width + " " + height)
+				.append("g")
+				.attr("class", "building")
+				.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+				.append("g")
+				.attr("class", "padding")
+				.attr("transform", "translate(" + innermargin.left + "," + innermargin.top + ")"),
+				
 	  		d3.select("#building")
 					 .style("width", dim.width() + "px")
 					 .style("height", dim.height()  + "px")
