@@ -1,9 +1,9 @@
-define(['jquery','knockout', 'knockoutpb'], function($, ko, d3building){
+define(['jquery','knockout', 'd3building', 'knockoutpb'], function($, ko, d3building){
+	
+	d3building.init();
 	
 	var 
 		id = "cinc",
-		
-		_kickoff = d3building.init(),
 		
         selectedItem    = ko.observable().subscribeTo("menu_event", true),
 
