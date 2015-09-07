@@ -16,8 +16,6 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		selectedItem    = ko.observable().publishOn("menu_event"),
 		
 		_subscription = selectedItem.subscribe(function(item){
-			console.log("LODING TEMPLET ");
-			console.log(item);
 			loadTemplate(item);
 		}),
 		
@@ -26,7 +24,10 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		},
 		
 		loadTemplate = function(item){
+			 console.log("ok loading");
+			 console.log(item);
 			 if (loadedTemplates.indexOf(item.id) < 0){
+			 
                 require([item.id],
                     function(vm){
                        
@@ -36,9 +37,11 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
                             dataType: "html",
 
                             success: function (response) {
+                            	console.log("Appendng to #" + item.id);
                                 $("#" + item.id).append("<div data-bind='visible:amSelected()'>" + response + "</div>");
                                 ko.applyBindings(vm, $("#" + item.id)[0]);
                                 loadedTemplates.push(item.id);
+                                vm.selectItem(item);
                             },
                             error: function (xhr, ajaxOptions, thrownError) {
                                 //handle error appropriately!
