@@ -10,7 +10,8 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
         });
         
     return {
-		amSelected: amSelected
+		amSelected: amSelected,
+		selectedItem:selectedItem,
     }
 
 });

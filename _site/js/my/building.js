@@ -44,7 +44,8 @@ define(['jquery','knockout', 'd3building', 'model', 'uidelegate', 'knockoutpb'],
         
         
     return {
-		amSelected: amSelected
+		amSelected: amSelected,
+		selectedItem:selectedItem,
     }
 
 });

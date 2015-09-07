@@ -68,6 +68,7 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		selectItem:selectItem,
 		amActive: amActive,
 		selectedHTML:selectedHTML,
+		selectedItem:selectedItem,
     }
 
 });
