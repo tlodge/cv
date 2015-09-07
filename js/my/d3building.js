@@ -2,8 +2,6 @@ define(['jquery','d3', 'util'], function($,d3,util){
 
 	"use strict";
 	var 
-	
-		socket,
 		
 		root,
 		
@@ -1006,27 +1004,6 @@ define(['jquery','d3', 'util'], function($,d3,util){
 			});	*/
 		},
 		
-		comms = function(){
-			socket = io();
-			
-			socket.on('connect', function(){console.log("connected!!")});  			
-  			
-  			socket.on('display', function(data){
-  				console.log("got some data!");
-  				var data = JSON.parse(data);
-  				console.log(data);
-  				var myrooms = data.map(function(item){
-  					return item.apartment.id;
-  				});
-  				console.log(myrooms);
-  				unionrooms(myrooms);
-  				
-  				
-  			});
-  			
-  			socket.on('disconnect', function(){console.log("disconnected!!")});
-		},
-		
 	  	init = function(dim){
 	  	
 	  		d3.select("#building")
@@ -1047,6 +1024,8 @@ define(['jquery','d3', 'util'], function($,d3,util){
   							.call(dragrooms);
   							
 	  		d3.json("data/building.json", function(error, json) {
+	  			console.log("am in gere....");
+	  			
   				if (error) 
   					return console.warn(error);
   				
