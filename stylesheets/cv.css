@@ -16,6 +16,10 @@
 	width: 100%;
 }
 
-.button .active{
+.button.active{
+	background: red;
+}
+
+.active{
 	background: red;
 }
