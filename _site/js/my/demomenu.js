@@ -5,8 +5,6 @@ define(['jquery','knockout', 'knockoutpb'], function($, ko){
 		menuItems = ko.observableArray([
 											{name:"roomcast", 	id: "roomcast"},
 											{name:"erith park", id: "erith"}, 
-											{name:"ucn", 		id: "ucn"}, 
-											{name:"homework", 	id:"homework"},
 											{name:"becoming dataware", id:"dataware"},
 											{name:"communities in the clouds", id: "building"},
 										]),
