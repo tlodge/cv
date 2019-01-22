@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 3123 2157" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <rect x="0" y="0" width="3122.47" height="2156.95" style="fill:#ebebeb;"/>
+    <g>
+        <rect x="873.099" y="1715.88" width="477.29" height="289.525" style="fill:#ebebeb;stroke:#545454;stroke-width:10.42px;"/>
+        <rect x="894.045" y="1733.62" width="436.691" height="250.318" style="fill:#fff;stroke:#545454;stroke-width:8.33px;"/>
+        <rect x="945.729" y="1799.26" width="21.559" height="137.693" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:8.33px;"/>
+        <rect x="983.526" y="1843.07" width="20.804" height="93.885" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:8.33px;"/>
+        <rect x="1020.81" y="1859.67" width="21.08" height="77.281" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:8.33px;"/>
+        <rect x="1058.23" y="1875.48" width="21.08" height="61.473" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:8.33px;"/>
+        <rect x="1095.79" y="1892.57" width="20.804" height="44.379" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:8.33px;"/>
+        <rect x="1133.21" y="1843.07" width="20.804" height="93.885" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:8.33px;"/>
+        <rect x="1170.49" y="1781.52" width="21.08" height="155.426" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:8.33px;"/>
+        <rect x="1208.05" y="1843.07" width="20.804" height="93.885" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:8.33px;"/>
+        <rect x="1245.33" y="1864.14" width="21.08" height="72.812" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:8.33px;"/>
+        <circle cx="1095.98" cy="1728.09" r="22.19" style="fill:#fffdfd;stroke:#5b5ecd;stroke-width:6.25px;"/>
+        <path d="M1019.23,2075.45C1022.46,2036.71 1056.31,2006.18 1097.54,2006.18C1138.76,2006.18 1172.61,2036.71 1175.84,2075.45L1019.23,2075.45Z" style="fill:#fff;stroke:#545454;stroke-width:14.58px;"/>
+    </g>
+    <g>
+        <rect x="1527.74" y="1717.79" width="477.29" height="289.525" style="fill:#ebebeb;stroke:#545454;stroke-width:10.42px;"/>
+        <rect x="1548.69" y="1735.53" width="436.691" height="250.318" style="fill:#fff;stroke:#545454;stroke-width:8.33px;"/>
+        <g>
+            <path d="M1726.25,1774.44C1721.61,1769.8 1714.08,1769.8 1709.44,1774.44L1653.53,1830.35C1648.89,1834.99 1648.89,1842.52 1653.53,1847.16C1658.16,1851.8 1665.69,1851.8 1670.33,1847.16L1726.25,1791.25C1730.88,1786.61 1730.88,1779.08 1726.25,1774.44Z" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:10.42px;"/>
+            <path d="M1775.56,1821.96C1770.92,1817.32 1763.39,1817.32 1758.75,1821.96L1702.84,1877.87C1698.2,1882.51 1698.2,1890.04 1702.84,1894.68C1707.48,1899.32 1715.01,1899.32 1719.65,1894.68L1775.56,1838.77C1780.2,1834.13 1780.2,1826.6 1775.56,1821.96Z" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:10.42px;"/>
+            <path d="M1677.87,1864.18C1673.23,1859.54 1665.7,1859.54 1661.06,1864.18L1605.15,1920.09C1605.55,1936.28 1605.15,1936.9 1605.15,1936.9C1605.15,1936.9 1605.51,1935.55 1621.96,1936.9L1677.87,1880.99C1682.51,1876.35 1682.51,1868.82 1677.87,1864.18Z" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:10.42px;"/>
+            <path d="M1659.95,1790.69L1760.94,1891.68C1747.46,1907.61 1726.9,1917.8 1703.87,1917.8C1663.31,1917.8 1630.38,1886.18 1630.38,1847.24C1630.38,1824.11 1642.01,1803.56 1659.95,1790.69Z" style="fill:#ebebeb;stroke:#7e7c7c;stroke-width:10.42px;"/>
+        </g>
+        <text x="1822.35px" y="1882.56px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:93.936px;fill:#545454;">on</text>
+        <circle cx="1773.51" cy="1725.84" r="22.19" style="fill:#fffdfd;stroke:#5b5ecd;stroke-width:6.25px;"/>
+        <path d="M1673.87,2077.36C1677.1,2038.62 1710.95,2008.09 1752.18,2008.09C1793.4,2008.09 1827.25,2038.62 1830.49,2077.36L1673.87,2077.36Z" style="fill:#fff;stroke:#545454;stroke-width:14.58px;"/>
+    </g>
+    <g>
+        <path d="M2284.72,565.424C2284.72,554.517 2275.86,545.67 2264.96,545.67L2169.62,545.67C2158.72,545.67 2149.86,554.517 2149.86,565.424L2149.86,646.626C2149.86,657.524 2158.72,666.38 2169.62,666.38L2264.96,666.38C2275.86,666.38 2284.72,657.524 2284.72,646.626L2284.72,565.424Z" style="fill:#fff;"/>
+        <path d="M2134.95,556.962C2134.95,549.914 2129.23,544.197 2122.18,544.197L2118.14,544.197C2111.09,544.197 2105.36,549.914 2105.36,556.962L2105.36,621.498C2105.36,628.546 2111.09,634.271 2118.14,634.271L2122.18,634.271C2129.23,634.271 2134.95,628.546 2134.95,621.498L2134.95,556.962Z" style="fill:#fff;"/>
+        <path d="M2262.49,468.963C2263.68,466.502 2262.64,463.556 2260.18,462.375L2258.78,461.706C2256.32,460.526 2253.37,461.563 2252.19,464.016L2237.58,494.459C2236.41,496.912 2237.44,499.867 2239.9,501.039L2241.31,501.717C2243.76,502.897 2246.72,501.859 2247.89,499.406L2262.49,468.963L2262.49,468.963Z" style="fill:#fff;"/>
+        <path d="M2165.15,471.842C2163.97,469.39 2165,466.435 2167.46,465.263L2168.87,464.585C2171.32,463.405 2174.27,464.443 2175.45,466.895L2190.06,497.339C2191.24,499.8 2190.2,502.746 2187.75,503.926L2186.33,504.596C2183.88,505.776 2180.93,504.738 2179.75,502.286L2165.15,471.842L2165.15,471.842Z" style="fill:#fff;"/>
+        <path d="M2327.93,558.527C2327.93,551.479 2322.21,545.753 2315.16,545.753L2311.11,545.753C2304.06,545.753 2298.35,551.479 2298.35,558.527L2298.35,623.063C2298.35,630.111 2304.06,635.828 2311.11,635.828L2315.16,635.828C2322.21,635.828 2327.93,630.111 2327.93,623.063L2327.93,558.527Z" style="fill:#fff;"/>
+        <path d="M2202.41,647.555C2202.41,640.507 2196.69,634.79 2189.65,634.79L2185.6,634.79C2178.55,634.79 2172.83,640.507 2172.83,647.555L2172.83,712.091C2172.83,719.139 2178.55,724.864 2185.6,724.864L2189.65,724.864C2196.69,724.864 2202.41,719.139 2202.41,712.091L2202.41,647.555Z" style="fill:#fff;"/>
+        <path d="M2259.32,647.823C2259.32,640.775 2253.6,635.058 2246.55,635.058L2242.51,635.058C2235.46,635.058 2229.73,640.775 2229.73,647.823L2229.73,712.359C2229.73,719.407 2235.46,725.132 2242.51,725.132L2246.55,725.132C2253.6,725.132 2259.32,719.407 2259.32,712.359L2259.32,647.823Z" style="fill:#fff;"/>
+        <path d="M2280.77,539.233L2150.82,539.233C2155.62,505.207 2182.9,479.099 2215.8,479.099C2248.69,479.099 2275.97,505.207 2280.77,539.233ZM2182.9,504.696C2186.47,504.696 2189.37,508.053 2189.37,512.188C2189.37,516.322 2186.47,519.679 2182.9,519.679C2179.33,519.679 2176.43,516.322 2176.43,512.188C2176.43,508.053 2179.33,504.696 2182.9,504.696ZM2241.76,504.696C2245.33,504.696 2248.23,508.053 2248.23,512.188C2248.23,516.322 2245.33,519.679 2241.76,519.679C2238.18,519.679 2235.29,516.322 2235.29,512.188C2235.29,508.053 2238.18,504.696 2241.76,504.696Z" style="fill:#fff;"/>
+    </g>
+    <g>
+        <path d="M2706.64,493.618L2872.23,659.215C2850.13,685.338 2816.41,702.041 2778.66,702.041C2712.16,702.041 2658.16,650.201 2658.16,586.349C2658.16,548.415 2677.22,514.721 2706.64,493.618Z" style="fill:#fff;"/>
+        <path d="M2815.34,466.975C2807.74,459.37 2795.39,459.37 2787.78,466.975L2696.11,558.655C2688.5,566.26 2688.5,578.609 2696.11,586.214C2703.71,593.819 2716.06,593.819 2723.66,586.214L2815.34,494.534C2822.95,486.929 2822.95,474.58 2815.34,466.975Z" style="fill:#fff;"/>
+        <path d="M2896.21,544.894C2888.6,537.289 2876.25,537.289 2868.65,544.894L2776.97,636.574C2769.36,644.179 2769.36,656.528 2776.97,664.133C2784.57,671.738 2796.92,671.738 2804.53,664.133L2896.21,572.453C2903.81,564.848 2903.81,552.499 2896.21,544.894Z" style="fill:#fff;"/>
+        <path d="M2736.02,614.119C2728.42,606.513 2716.07,606.513 2708.46,614.119L2616.78,705.799C2617.45,732.344 2616.78,733.357 2616.78,733.357C2616.78,733.357 2617.38,731.142 2644.34,733.357L2736.02,641.677C2743.63,634.072 2743.63,621.724 2736.02,614.119Z" style="fill:#fff;"/>
+    </g>
+    <g>
+        <path d="M1570.81,665.358L1570.81,708.247L1606.34,732.137L1644.65,708.247L1644.65,665.358L1570.81,665.358Z" style="fill:#fff;"/>
+        <path d="M1627.39,670.762C1663.64,650.456 1709.17,566.205 1693.27,527.54C1667.18,464.071 1548.97,461.356 1525.94,527.54C1515.94,556.304 1540.6,625.651 1587.48,670.762L1627.39,670.762Z" style="fill:none;stroke:#fff;stroke-width:13.71px;"/>
+        <path d="M1620.68,508.103C1644.82,508.725 1660,518.462 1659.12,544.573" style="fill:none;stroke:#fff;stroke-width:13.71px;"/>
+    </g>
+    <text x="110.654px" y="154.557px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:117.421px;">TES<tspan x="303.813px 360.46px " y="154.557px 154.557px ">T </tspan>ENVIR<tspan x="744.943px 849.865px " y="154.557px 154.557px ">ON</tspan>MENT</text>
+    <text x="126.412px" y="281.32px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:78.28px;fill:#828282;">apps can be t<tspan x="610.963px 654.269px 686.033px 708.125px 751.432px " y="281.32px 281.32px 281.32px 281.32px 281.32px ">ested</tspan> in-br<tspan x="977.52px 1023.08px 1083.66px " y="281.32px 281.32px 281.32px ">ows</tspan>er against moc<tspan x="1640.95px 1679.94px " y="281.32px 281.32px ">k </tspan>dat<tspan x="1820.07px 1867px " y="281.32px 281.32px ">a </tspan>pr<tspan x="1968.56px 1988.06px " y="281.32px 281.32px ">io</tspan>r t<tspan x="2110.48px 2157.54px " y="281.32px 281.32px ">o </tspan>publication</text>
+    <text x="246.224px" y="621.542px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:78.28px;">moc<tspan x="394.529px 433.516px " y="621.542px 621.542px ">k </tspan>dat<tspan x="573.641px " y="621.542px ">a</tspan></text>
+    <text x="242.487px" y="1264.03px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:78.28px;">t<tspan x="264.58px 307.886px " y="1264.03px 1264.03px ">es</tspan>t app</text>
+    <text x="247.635px" y="1896.66px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:78.28px;">t<tspan x="269.728px 313.034px " y="1896.66px 1896.66px ">es</tspan>t output</text>
+    <path d="M1097.81,1724.16C1103.08,1545.17 1895.74,1103.93 2118.32,1145.05" style="fill:none;stroke:#5b5ecd;stroke-width:10.42px;"/>
+    <path d="M1770.84,1722.13C1771.86,1636.74 2019.72,1548.56 2126.27,1559.35" style="fill:none;stroke:#5b5ecd;stroke-width:10.42px;"/>
+    <path d="M1126.4,560.063C1118.07,664.689 1086.1,698.479 1002.51,721.073C942.771,736.955 890.126,730.444 847.438,703.998C883.053,708.492 913.667,703.39 932.308,675.378C911.684,669.07 891.726,661.22 877.342,640.506L902.471,632.577C863.59,614.387 851.11,605.511 847.438,571.338L877.342,571.338C866.777,571.732 848.745,532.446 853.701,490.523C896.682,535.115 955.51,555.873 990.618,554.195C1011.25,550.568 1003.44,528.47 1010.97,505.459C1024.89,462.939 1058.39,470.43 1104.98,490.523L1156.04,490.523L1118.95,512.464L1164.21,512.464C1139.28,522.173 1120.42,535.487 1126.4,560.063L1126.4,560.063Z" style="fill:#5b5ecd;"/>
+    <rect x="896.124" y="1141.53" width="212.801" height="207.668" style="fill:#fff;"/>
+    <text x="958.85px" y="1255.23px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:39.072px;">twitt<tspan x="1031.21px 1052.83px " y="1255.23px 1255.23px ">er</tspan></text>
+    <rect x="1568.5" y="1351.13" width="207.668" height="207.668" style="fill:#fff;"/>
+    <rect x="2099.95" y="1353.79" width="207.668" height="207.668" style="fill:#fff;"/>
+    <rect x="2101.51" y="947.318" width="207.668" height="207.668" style="fill:#fff;"/>
+    <rect x="1567.16" y="940.04" width="207.668" height="207.668" style="fill:#fff;"/>
+    <text x="1629.82px" y="1054.47px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:39.072px;">c<tspan x="1649.45px 1670.88px 1694.31px 1710.33px " y="1054.47px 1054.47px 1054.47px 1054.47px ">hart</tspan></text>
+    <text x="1604.82px" y="1463.85px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:39.072px;">function</text>
+    <text x="2166.59px" y="1474.89px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:39.072px;">plug</text>
+    <text x="2146.28px" y="1063px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:39.072px;">displa<tspan x="2252.22px " y="1063px ">y</tspan></text>
+    <path d="M1772.61,1454.33L2103.31,1454.33" style="fill:none;stroke:#545454;stroke-width:10.42px;"/>
+    <path d="M1774.17,1047.86L2104.86,1047.86" style="fill:none;stroke:#545454;stroke-width:10.42px;"/>
+    <path d="M1002.44,1134.68L1002.44,738.516" style="fill:none;stroke:#5b5ecd;stroke-width:10.42px;"/>
+    <path d="M1118.14,1244.99C1326.31,1244.17 1322.63,1039.2 1575.96,1040.39" style="fill:none;stroke:#545454;stroke-width:10.42px;"/>
+    <path d="M1116.22,1248.59C1324.39,1249.4 1320.71,1454.37 1574.04,1453.19" style="fill:none;stroke:#545454;stroke-width:10.42px;"/>
+    <circle cx="1110.13" cy="1248.87" r="13.845" style="fill:#fffdfd;stroke:#6d6a6a;stroke-width:6.25px;"/>
+    <circle cx="1572.62" cy="1039.42" r="13.845" style="fill:#fffdfd;stroke:#6d6a6a;stroke-width:6.25px;"/>
+    <circle cx="1570.28" cy="1453.45" r="13.845" style="fill:#fffdfd;stroke:#6d6a6a;stroke-width:6.25px;"/>
+    <circle cx="2106.18" cy="1457.55" r="13.845" style="fill:#fffdfd;stroke:#6d6a6a;stroke-width:6.25px;"/>
+    <circle cx="2107.73" cy="1051.08" r="13.845" style="fill:#fffdfd;stroke:#6d6a6a;stroke-width:6.25px;"/>
+    <circle cx="1773.47" cy="1455.72" r="13.845" style="fill:#fffdfd;stroke:#6d6a6a;stroke-width:6.25px;"/>
+    <circle cx="1775.03" cy="1049.25" r="13.845" style="fill:#fffdfd;stroke:#6d6a6a;stroke-width:6.25px;"/>
+    <circle cx="1001.62" cy="726.293" r="22.19" style="fill:#fffdfd;stroke:#5b5ecd;stroke-width:6.25px;"/>
+    <circle cx="1002.87" cy="1144.89" r="22.19" style="fill:#fffdfd;stroke:#5b5ecd;stroke-width:6.25px;"/>
+    <rect x="918.443" y="881.569" width="172.923" height="84.278" style="fill:#fff;stroke:#5b5ecd;stroke-width:10.42px;"/>
+    <text x="957.628px" y="935.37px" style="font-family:'Futura-Medium', 'Futura', sans-serif;font-weight:500;font-size:39.072px;">tw<tspan x="997.959px 1019.58px 1041.53px " y="935.37px 935.37px 935.37px ">eet</tspan></text>
+    <ellipse cx="2119.51" cy="1142.58" rx="43.775" ry="42.018" style="fill:#fff;stroke:#5b5ecd;stroke-width:10.42px;"/>
+    <ellipse cx="2110.52" cy="1553.74" rx="43.775" ry="42.018" style="fill:#fff;stroke:#5b5ecd;stroke-width:10.42px;"/>
+</svg>
