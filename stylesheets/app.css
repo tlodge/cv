@@ -4712,8 +4712,7 @@ label.error {
 
 /* line 53, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
 .inline-list {
-  margin: 0 auto 1.0625rem auto;
-  margin-left: -1.375rem;
+  margin-left: 0px;
   margin-right: 0;
   padding: 0;
   list-style: none;
@@ -4722,8 +4721,6 @@ label.error {
 /* line 42, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
 .inline-list > li {
   list-style: none;
-  float: left;
-  margin-left: 1.375rem;
   display: block;
 }
 /* line 47, ../bower_components/foundation/scss/foundation/components/_inline-lists.scss */
