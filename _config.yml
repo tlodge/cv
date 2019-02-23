@@ -1,1 +1,3 @@
 hostname: http://www.tomlodge.info
+plugins:
+  - jekyll-redirect-from
